@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile List</title>
+  <style>
+    .profile {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class=profile>
+    <h2>Name: Sakshi Kadam</h2>
+    <p>Description: Student of ICCS. Currently Live in India.</p>
+    <div class=address>
+      <!-- Conditional rendering based on variable -->
+      {{ showAddress ? 'Address: Nigdi, Pune, Maharashtra India' : '' }}
+    </div>
+    <button onclick=toggleAddress()>Toggle Address</button>
+  </div>
+
+  <script>
+    let showAddress = false;
+
+    function toggleAddress() {
+      showAddress = !showAddress;
+      render();
+    }
+
+    function render() {
+      document.body.innerHTML = `
+        <div class=profile>
+          <h2>Name: Sakshi Kadam</h2>
+          <p>Description: Student of ICCS. Currently Live in India.</p>
+          <div class=address>
+            ${showAddress ? 'Address: Nigdi, Pune, Maharashtra India' : ''}
+          </div>
+          <button onclick=toggleAddress()>Toggle Address</button>
+        </div>
+      `;
+    }
+
+    render();
+  </script>
+<div class=profile>
+    <h2>Name: Tejaswini Dhumal</h2>
+    <p>Description: Employee of TCS. Currently Live in Mumbai.</p>
+   <div class=address>
+      <!-- Conditional rendering based on variable -->
+      {{ showAddress ? 'Address: Thane, Mumbai, Maharashtra India' : '' }}
+    </div>
+    <button onclick=toggleAddress()>Toggle Address</button>
+  </div>
+
+  <script>
+    let showAddress = false;
+
+    function toggleAddress() {
+      showAddress = !showAddress;
+      render();
+    }
+
+    function render() {
+      document.body.innerHTML = `
+        <div class=profile>
+          <h2>Name: Tejaswini Dhumal</h2>
+          <p>Description: Employee of TCS. Currently Live in Mumbai.</p>
+          <div class=address>
+            ${showAddress ? 'Address: Thane, Mumbai, Maharashtra India' : ''}
+          </div>
+          <button onclick=toggleAddress()>Toggle Address</button>
+        </div>
+      `;
+    }
+
+    render();
+  </script>
+<div class=profile>
+    <h2>Name: Siddhi Utekar</h2>
+    <p>Description: Student of ICCS. Currently Doing her Graduation.</p>
+   <div class=address>
+      <!-- Conditional rendering based on variable -->
+      {{ showAddress ? 'Address: Wakad, Pune, Maharashtra India' : '' }}
+    </div>
+    <button onclick=toggleAddress()>Toggle Address</button>
+  </div>
+
+  <script>
+    let showAddress = false;
+
+    function toggleAddress() {
+      showAddress = !showAddress;
+      render();
+    }
+
+    function render() {
+      document.body.innerHTML = `
+        <div class=profile>
+          <h2>Name: Siddhi Utekar</h2>
+          <p>Description: Student of ICCS. Currently Doing her Graduation.</p>
+          <div class=address>
+            ${showAddress ? 'Address: Wakad, Pune, Maharashtra India' : ''}
+          </div>
+          <button onclick=toggleAddress()>Toggle Address</button>
+        </div>
+      `;
+    }
+
+    render();
+  </script>
+</body>
+</html>
